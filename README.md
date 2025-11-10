@@ -1,4 +1,4 @@
-# analysis_cn 项目
+# 一个中国数据分析的Baseline
 
 面向中国驾驶员的路径决策分析。流水线自原始 `CN_dataset_FULL.xlsx` 出发，依次完成：
 
