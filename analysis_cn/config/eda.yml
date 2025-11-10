@@ -1,0 +1,23 @@
+input_path: data/processed/CN_cleaned.parquet
+outputs:
+  report: reports/01_EDA_report.html
+  stats_json: results/eda_statistics.json
+  figures_dir: figures/eda
+plotting:
+  dpi: 120
+  palette: "#4C78A8,#F58518,#54A24B,#E45756"
+variables:
+  commute: [q3_morning_commute_minutes, q4_evening_commute_minutes]
+  congestion: [q6_morning_congestion_minutes, q7_evening_congestion_minutes]
+  thresholds:
+    delay: q13_delay_threshold_minutes
+    wait: q15_wait_before_detour_minutes
+  likert_blocks:
+    - [q8_1_congestion_problem, q8_2_reroute_frequency, q8_3_confidence, q8_4_return_normal]
+    - [q11_1_seek_info, q11_2_disagree_guidance, q11_3_ignore_guidance]
+    - [q12_1_workzone, q12_2_special_event, q12_3_weather, q12_4_peak, q12_5_incident]
+correlations:
+  include: [q3_morning_commute_minutes, q4_evening_commute_minutes, q6_morning_congestion_minutes,
+            q7_evening_congestion_minutes, q13_delay_threshold_minutes, q15_wait_before_detour_minutes,
+            risk_aversion_index, comfort_preference_index, efficiency_orientation_index,
+            information_dependency_index]

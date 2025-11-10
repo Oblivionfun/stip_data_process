@@ -1,0 +1,30 @@
+clean_data_path: data/processed/CN_cleaned.parquet
+outputs:
+  features: data/processed/CN_features.parquet
+  metadata: results/features_meta.json
+  summary: results/features_summary.json
+feature_params:
+  commute_columns:
+    morning: q3_morning_commute_minutes
+    evening: q4_evening_commute_minutes
+    congestion_morning: q6_morning_congestion_minutes
+    congestion_evening: q7_evening_congestion_minutes
+  delay_columns:
+    threshold: q13_delay_threshold_minutes
+    wait: q15_wait_before_detour_minutes
+  likert_scales:
+    max_score: 5
+    min_score: 1
+  info_columns:
+    - q9_car_nav
+    - q9_phone_nav
+    - q9_social_media
+    - q9_web_announcement
+    - q9_radio_announcement
+    - q9_tv_announcement
+    - q9_word_of_mouth
+    - q9_visual_confirmation
+  categorical_one_hot:
+    - q5_route_type
+    - q25_home_location
+    - q26_work_location

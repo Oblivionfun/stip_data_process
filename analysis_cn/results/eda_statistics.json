@@ -1,0 +1,176 @@
+{
+  "commute_stats": {
+    "q3_morning_commute_minutes": {
+      "count": 1024,
+      "mean": 34.2783203125,
+      "median": 32.0,
+      "std": 12.93973091223588,
+      "min": 5.0,
+      "max": 90.0
+    },
+    "q4_evening_commute_minutes": {
+      "count": 1024,
+      "mean": 37.388671875,
+      "median": 35.0,
+      "std": 14.70788580264765,
+      "min": 0.0,
+      "max": 90.0
+    },
+    "paired_t_test": {
+      "t_stat": -10.803165902639952,
+      "p_value": 7.753348217610139e-26
+    }
+  },
+  "congestion_stats": {
+    "q6_morning_congestion_minutes": {
+      "count": 1024,
+      "mean": 16.5849609375,
+      "median": 12.0,
+      "std": 12.98794871135076,
+      "min": 1.0,
+      "max": 89.0
+    },
+    "q7_evening_congestion_minutes": {
+      "count": 1024,
+      "mean": 19.1103515625,
+      "median": 15.0,
+      "std": 13.253470386869918,
+      "min": 0.0,
+      "max": 68.0
+    },
+    "correlation": {
+      "corr": 0.8177818905696065,
+      "p_value": 1.8723279601669778e-247
+    }
+  },
+  "threshold_stats": {
+    "q13_delay_threshold_minutes": {
+      "count": 1024,
+      "mean": 18.8291015625,
+      "median": 17.0,
+      "std": 9.771039298211429,
+      "min": 2.0,
+      "max": 60.0
+    },
+    "q15_wait_before_detour_minutes": {
+      "count": 1024,
+      "mean": 17.888671875,
+      "median": 15.0,
+      "std": 9.328862317273902,
+      "min": 2.0,
+      "max": 60.0
+    },
+    "correlation": {
+      "corr": 0.7370414277687036,
+      "p_value": 4.31209050556655e-176
+    }
+  },
+  "reroute_stats": {},
+  "likert_stats": {
+    "block_1": {
+      "q8_1_congestion_problem": {
+        "count": 1024,
+        "mean": 4.328125,
+        "median": 4.0,
+        "std": 0.6933210202681367,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q8_2_reroute_frequency": {
+        "count": 1024,
+        "mean": 3.7822265625,
+        "median": 4.0,
+        "std": 0.9298127936940878,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q8_3_confidence": {
+        "count": 1024,
+        "mean": 3.8837890625,
+        "median": 4.0,
+        "std": 0.8716064753861086,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q8_4_return_normal": {
+        "count": 1024,
+        "mean": 3.908203125,
+        "median": 4.0,
+        "std": 0.869473101281125,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "cronbach_alpha": 0.4528959833793387
+    },
+    "block_2": {
+      "q11_1_seek_info": {
+        "count": 1024,
+        "mean": 3.974609375,
+        "median": 4.0,
+        "std": 0.852424432571801,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q11_2_disagree_guidance": {
+        "count": 1024,
+        "mean": 2.669921875,
+        "median": 2.0,
+        "std": 1.0567631622020575,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q11_3_ignore_guidance": {
+        "count": 1024,
+        "mean": 2.5341796875,
+        "median": 2.0,
+        "std": 1.0743629865731494,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "cronbach_alpha": 0.3916776453486115
+    },
+    "block_3": {
+      "q12_1_workzone": {
+        "count": 1024,
+        "mean": 4.220703125,
+        "median": 4.0,
+        "std": 0.8213435181038338,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q12_2_special_event": {
+        "count": 1024,
+        "mean": 4.0830078125,
+        "median": 4.0,
+        "std": 0.9242810928234066,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q12_3_weather": {
+        "count": 1024,
+        "mean": 3.7021484375,
+        "median": 4.0,
+        "std": 0.9887714038091482,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q12_4_peak": {
+        "count": 1024,
+        "mean": 4.0029296875,
+        "median": 4.0,
+        "std": 0.8748641625813737,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "q12_5_incident": {
+        "count": 1024,
+        "mean": 4.2216796875,
+        "median": 4.0,
+        "std": 0.8577623888215958,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "cronbach_alpha": 0.5205453708419422
+    }
+  }
+}

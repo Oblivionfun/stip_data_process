@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8" />
+  <title>中国驾驶员路径决策 EDA</title>
+  <style>
+    body { font-family: 'Segoe UI', 'PingFang SC', sans-serif; margin: 24px; }
+    h1 { color: #1f4b99; }
+    section { margin-bottom: 32px; }
+    pre { background: #f5f5f5; padding: 12px; overflow-x: auto; }
+    .figures img { max-width: 320px; margin: 6px; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h1>中国驾驶员路径决策 - 探索性数据分析</h1>
+  <p>生成时间：2025-11-11T02:15:36</p>
+
+  <section>
+    <h2>通勤/拥堵统计</h2>
+    <pre>{
+  "q3_morning_commute_minutes": {
+    "count": 1024,
+    "mean": 34.2783203125,
+    "median": 32.0,
+    "std": 12.93973091223588,
+    "min": 5.0,
+    "max": 90.0
+  },
+  "q4_evening_commute_minutes": {
+    "count": 1024,
+    "mean": 37.388671875,
+    "median": 35.0,
+    "std": 14.70788580264765,
+    "min": 0.0,
+    "max": 90.0
+  },
+  "paired_t_test": {
+    "t_stat": -10.803165902639952,
+    "p_value": 7.753348217610139e-26
+  }
+}</pre>
+  </section>
+
+  <section>
+    <h2>延误 & 等待阈值</h2>
+    <pre>{
+  "q13_delay_threshold_minutes": {
+    "count": 1024,
+    "mean": 18.8291015625,
+    "median": 17.0,
+    "std": 9.771039298211429,
+    "min": 2.0,
+    "max": 60.0
+  },
+  "q15_wait_before_detour_minutes": {
+    "count": 1024,
+    "mean": 17.888671875,
+    "median": 15.0,
+    "std": 9.328862317273902,
+    "min": 2.0,
+    "max": 60.0
+  },
+  "correlation": {
+    "corr": 0.7370414277687036,
+    "p_value": 4.31209050556655e-176
+  }
+}</pre>
+  </section>
+
+  <section>
+    <h2>改道行为分析</h2>
+    <pre>{}</pre>
+  </section>
+
+  <section>
+    <h2>Likert 题块统计</h2>
+    <pre>{
+  "block_1": {
+    "q8_1_congestion_problem": {
+      "count": 1024,
+      "mean": 4.328125,
+      "median": 4.0,
+      "std": 0.6933210202681367,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q8_2_reroute_frequency": {
+      "count": 1024,
+      "mean": 3.7822265625,
+      "median": 4.0,
+      "std": 0.9298127936940878,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q8_3_confidence": {
+      "count": 1024,
+      "mean": 3.8837890625,
+      "median": 4.0,
+      "std": 0.8716064753861086,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q8_4_return_normal": {
+      "count": 1024,
+      "mean": 3.908203125,
+      "median": 4.0,
+      "std": 0.869473101281125,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "cronbach_alpha": 0.4528959833793387
+  },
+  "block_2": {
+    "q11_1_seek_info": {
+      "count": 1024,
+      "mean": 3.974609375,
+      "median": 4.0,
+      "std": 0.852424432571801,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q11_2_disagree_guidance": {
+      "count": 1024,
+      "mean": 2.669921875,
+      "median": 2.0,
+      "std": 1.0567631622020575,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q11_3_ignore_guidance": {
+      "count": 1024,
+      "mean": 2.5341796875,
+      "median": 2.0,
+      "std": 1.0743629865731494,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "cronbach_alpha": 0.3916776453486115
+  },
+  "block_3": {
+    "q12_1_workzone": {
+      "count": 1024,
+      "mean": 4.220703125,
+      "median": 4.0,
+      "std": 0.8213435181038338,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q12_2_special_event": {
+      "count": 1024,
+      "mean": 4.0830078125,
+      "median": 4.0,
+      "std": 0.9242810928234066,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q12_3_weather": {
+      "count": 1024,
+      "mean": 3.7021484375,
+      "median": 4.0,
+      "std": 0.9887714038091482,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q12_4_peak": {
+      "count": 1024,
+      "mean": 4.0029296875,
+      "median": 4.0,
+      "std": 0.8748641625813737,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "q12_5_incident": {
+      "count": 1024,
+      "mean": 4.2216796875,
+      "median": 4.0,
+      "std": 0.8577623888215958,
+      "min": 1.0,
+      "max": 5.0
+    },
+    "cronbach_alpha": 0.5205453708419422
+  }
+}</pre>
+  </section>
+
+  <section>
+    <h2>图表预览</h2>
+    <div class="figures">
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/commute_distribution.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/commute_distribution.png" alt="/root/code/stip/analysis_cn/figures/eda/commute_distribution.png" />
+        </div>
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/congestion_distribution.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/congestion_distribution.png" alt="/root/code/stip/analysis_cn/figures/eda/congestion_distribution.png" />
+        </div>
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/commute_boxpair.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/commute_boxpair.png" alt="/root/code/stip/analysis_cn/figures/eda/commute_boxpair.png" />
+        </div>
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/likert_block_1.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/likert_block_1.png" alt="/root/code/stip/analysis_cn/figures/eda/likert_block_1.png" />
+        </div>
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/likert_block_2.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/likert_block_2.png" alt="/root/code/stip/analysis_cn/figures/eda/likert_block_2.png" />
+        </div>
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/likert_block_3.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/likert_block_3.png" alt="/root/code/stip/analysis_cn/figures/eda/likert_block_3.png" />
+        </div>
+      
+        <div>
+          <p>/root/code/stip/analysis_cn/figures/eda/correlation_heatmap.png</p>
+          <img src="/root/code/stip/analysis_cn/figures/eda/correlation_heatmap.png" alt="/root/code/stip/analysis_cn/figures/eda/correlation_heatmap.png" />
+        </div>
+      
+    </div>
+  </section>
+</body>
+</html>

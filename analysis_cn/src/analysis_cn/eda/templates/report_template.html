@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8" />
+  <title>中国驾驶员路径决策 EDA</title>
+  <style>
+    body { font-family: 'Segoe UI', 'PingFang SC', sans-serif; margin: 24px; }
+    h1 { color: #1f4b99; }
+    section { margin-bottom: 32px; }
+    pre { background: #f5f5f5; padding: 12px; overflow-x: auto; }
+    .figures img { max-width: 320px; margin: 6px; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h1>中国驾驶员路径决策 - 探索性数据分析</h1>
+  <p>生成时间：{{ generated_at }}</p>
+
+  <section>
+    <h2>通勤/拥堵统计</h2>
+    <pre>{{ commute_stats_json }}</pre>
+  </section>
+
+  <section>
+    <h2>延误 & 等待阈值</h2>
+    <pre>{{ threshold_stats_json }}</pre>
+  </section>
+
+  <section>
+    <h2>改道行为分析</h2>
+    <pre>{{ reroute_stats_json }}</pre>
+  </section>
+
+  <section>
+    <h2>Likert 题块统计</h2>
+    <pre>{{ likert_stats_json }}</pre>
+  </section>
+
+  <section>
+    <h2>图表预览</h2>
+    <div class="figures">
+      {% for fig in figures %}
+        <div>
+          <p>{{ fig }}</p>
+          <img src="{{ fig }}" alt="{{ fig }}" />
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</body>
+</html>

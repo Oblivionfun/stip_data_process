@@ -1,0 +1,90 @@
+raw_path: ../CN_dataset_FULL.xlsx
+rename_map: data/metadata/columns_map_cn.yml
+outputs:
+  clean_csv: data/processed/CN_cleaned.csv
+  clean_parquet: data/processed/CN_cleaned.parquet
+  quality_report: results/quality_report.json
+filters:
+  drop_duplicates_on: respondent_id
+  max_duration_seconds: 1800
+  drop_columns:
+    - q1_attention_prompt
+    - q2_attention_prompt
+    - q14_10_control
+    - q23_vehicle_type
+numeric_columns:
+  - q3_morning_commute_minutes
+  - q4_evening_commute_minutes
+  - q5_route_type
+  - q6_morning_congestion_minutes
+  - q7_evening_congestion_minutes
+  - q8_1_congestion_problem
+  - q8_2_reroute_frequency
+  - q8_3_confidence
+  - q8_4_return_normal
+  - q9_car_nav
+  - q9_phone_nav
+  - q9_social_media
+  - q9_web_announcement
+  - q9_radio_announcement
+  - q9_tv_announcement
+  - q9_word_of_mouth
+  - q9_visual_confirmation
+  - q9_none
+  - q9_other
+  - q10_when_seek_info
+  - q11_1_seek_info
+  - q11_2_disagree_guidance
+  - q11_3_ignore_guidance
+  - q11_4_cancel_trip
+  - q12_1_workzone
+  - q12_2_special_event
+  - q12_3_weather
+  - q12_4_peak
+  - q12_5_incident
+  - q13_delay_threshold_minutes
+  - q14_1_prefer_familiar
+  - q14_2_familiar_enables_detour
+  - q14_3_prefer_highway
+  - q14_4_reliability_important
+  - q14_5_multi_choices
+  - q14_6_no_detour_if_longer
+  - q14_7_lane_closure_impact
+  - q14_8_choose_smooth
+  - q14_9_immediate_detour
+  - q14_11_signals_impact
+  - q14_12_farther_more_detour
+  - q14_13_avoid_workzone
+  - q14_14_awareness_events
+  - q14_15_vms_useful
+  - q14_16_follow_vms
+  - q14_17_social_influence
+  - q14_18_passenger_effect
+  - q14_19_aggressive_self
+  - q14_20_cautious_self
+  - q15_wait_before_detour_minutes
+  - q16_1_commute_am
+  - q16_2_commute_pm
+  - q16_3_shopping
+  - q16_4_leisure
+  - q16_5_long_trip
+  - q16_6_emergency
+  - q17_gender
+  - q18_age
+  - q19_ethnicity
+  - q20_income
+  - q21_occupation
+  - q22_education
+  - q24_vehicle_nav
+  - q25_home_location
+  - q26_work_location
+quality_flags:
+  info_channel_cols:
+    - q9_car_nav
+    - q9_phone_nav
+    - q9_social_media
+    - q9_web_announcement
+    - q9_radio_announcement
+    - q9_tv_announcement
+    - q9_word_of_mouth
+    - q9_visual_confirmation

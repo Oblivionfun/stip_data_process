@@ -1,0 +1,15 @@
+features_path: data/processed/CN_features.parquet
+outputs:
+  train: data/processed/train.csv
+  val: data/processed/val.csv
+  test: data/processed/test.csv
+  stats: results/dataset_stats.json
+split:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+  random_state: 42
+  stratify_on: target_reroute_high
+targets:
+  binary_high_reroute: target_reroute_high
+  regression_delay_threshold: q13_delay_threshold_minutes
