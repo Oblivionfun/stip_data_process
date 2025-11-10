@@ -1,9 +1,0 @@
-{
-  "train_rows": 716,
-  "val_rows": 154,
-  "test_rows": 154,
-  "targets": {
-    "binary_high_reroute": "target_reroute_high",
-    "regression_delay_threshold": "q13_delay_threshold_minutes"
-  }
-}
