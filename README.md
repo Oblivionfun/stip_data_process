@@ -1,6 +1,6 @@
 # 一个中国数据分析的Baseline
 
-面向中国驾驶员的路径决策分析。流水线自原始 `CN_dataset_FULL.xlsx` 出发，依次完成：
+面向中国驾驶员的路径决策分析。流水线自原始 `CN_dataset_FULL.xlsx`（放在项目根目录） 出发，依次完成：
 
 - **数据清洗（clean-data）**：`ingest_cn.py` 解析 Excel，按 `rename_map` 自动重命名中文列、统一字符串时长、数值化 Likert/多选题，过滤掉重复/超长作答/关键字段缺失的数据，同时生成信息渠道使用等质量标记，输出 `data/processed/CN_cleaned.csv|parquet` 及 `results/quality_report.json`。
 - **特征工程（build-features）**：`feature_engineering.py` 基于清洗数据计算通勤差值、拥堵占比、延误-等待差异、偏好指数（风险规避/舒适偏好/效率导向/信息依赖），派生目标标签与类别哑变量，形成 `data/processed/CN_features.parquet`、`results/features_meta.json`、`results/features_summary.json`。
